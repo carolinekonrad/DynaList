@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose, { Schema } from "mongoose";
 import bcrypt from 'bcrypt'
 
 const userSchema = new mongoose.Schema({
@@ -10,7 +10,11 @@ const userSchema = new mongoose.Schema({
 	},
 	password: {
 		type: String,
-	}
+	},
+	groups: [{
+		type: Schema.Types.ObjectId,
+		ref: 'Group'
+	}]
 })
 
 userSchema.pre('save', async function (next) {
