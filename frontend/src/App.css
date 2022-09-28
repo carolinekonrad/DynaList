@@ -1,3 +1,27 @@
+/* ROOT COLORS */
+:root{
+  /* Palette Colors*/
+  --palette-logo-purple: #7749CD;
+  --palette-light-purple: #9B89B3;
+  --palette-bright-purple: #A67CE4;
+  --palette-white-purple: #FEF6FF;
+  --palette-tan: #D5CABD;
+  --palette-dark-grey: #4B4453;
+  --palette-light-grey:#B0A8B9;
+  --palette-salmon:#D99585;
+ 
+  /* Other Colors Defined */
+  --background-light-color: white;
+  --background-dark-color: #121212;
+  --lightmode-text-color: #121212;
+  --darkmode-text-color:white;
+  --add-button-color: rgb(124, 201, 124);
+  --edit-button-color: rgb(245, 245, 103);
+  --delete-button-color: rgb(240, 70, 70);
+  --like-button-color: rgb(200, 100, 200);
+  --comment-button-color: rgb(255, 179, 37);
+}
+
 .App {
   text-align: center;
 }
