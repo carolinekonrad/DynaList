@@ -1,25 +1,26 @@
-import logo from './logo.svg';
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import './App.css';
+import CurrentUserProvider from './contexts/CurrentUser'
+import Home from './components/Home';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          DynaList
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <CurrentUserProvider>
+        <BrowserRouter>
+          {/* input Nav component here */}
+          <Switch>
+            <Route exact path="/" component={Home} />
+            {/* <Route exact path="/sign-up" component={SignUpForm} />
+            <Route exact path="/login" component={LoginForm} />
+            <Route exact path="/places" component={PlaceIndex} />
+            <Route exact path="/places/new" component={NewPlaceForm} />
+            <Route exact path="/places/:placeId" component={PlaceDetails} />
+            <Route exact path="/places/:placeId/edit" component={EditPlaceForm} />
+            <Route path="/" component={Error404} /> */}
+          </Switch>
+        </BrowserRouter>
+      </CurrentUserProvider>
+  )
 }
 
 export default App;
